@@ -35,7 +35,7 @@ export class InstaBasicIndicator extends DDDSuper(I18NMixin(LitElement)) {
       }
       .dots {
         display: flex;
-        margin-left: 150px;
+        margin-left: var(--ddd-spacing-30);
         gap: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-2);
         }

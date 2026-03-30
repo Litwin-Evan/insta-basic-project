@@ -1,0 +1,31 @@
+{
+    "slides": [
+        {
+            "topHeading": "Sunrise",
+            "subHeading": "Taken around the corner",
+            "dateTaken": "2026-01-02",
+            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTewrqU2aLzzecS5nP822EaoiA5CVQxuYP38g&s",
+            "author": {
+                "name": "Joe Dirt",
+                "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTewrqU2aLzzecS5nP822EaoiA5CVQxuYP38g&s",
+                "userSince": "2026",
+                "username": "joe.around"   
+            }
+            
+        },
+        {
+            "topHeading": "Ocean",
+            "subHeading": "The Great Barrier Reef",
+            "dateTaken": "2026-01-02",
+            "photo": "https://afar.brightspotcdn.com/dims4/default/de283c0/2147483647/strip/false/crop/1600x900+0+84/resize/1200x675!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fae%2Ffe%2F6496852583abdad7a0a28cc78fb6%2Foriginal-shutterstock-1158634060-20copy.jpg",
+            "author": {
+                "name": "Frank Dirt",
+                "photo": "https://afar.brightspotcdn.com/dims4/default/de283c0/2147483647/strip/false/crop/1600x900+0+84/resize/1200x675!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fae%2Ffe%2F6496852583abdad7a0a28cc78fb6%2Foriginal-shutterstock-1158634060-20copy.jpg",
+                "userSince": "2026",
+                "username": "frank.around" 
+              
+            }
+        }
+    ]
+}
+

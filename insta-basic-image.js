@@ -48,8 +48,11 @@ export class InstaBasicImage extends DDDSuper(I18NMixin(LitElement)) {
         }
           img { 
             aspect-ratio: 1 / 1;
-            height: 250px;
+            height: 400x;
+            width: 400px;
             border-radius: var(--ddd-border-radius);
+            margin-left: var(--ddd-spacing-30);
+            
           } 
       
     `];
@@ -58,23 +61,9 @@ export class InstaBasicImage extends DDDSuper(I18NMixin(LitElement)) {
   // Lit render the HTML
   render() {
     return html`
-            <img src = "${this.src}" alt = "${this.alt}" style="width: 100%; height: auto; border-radius: var(--ddd-border-radius);">
+       <img src = "${this.src}" alt = "${this.alt}">
           
     `;
-  }
-
-async connectedCallback() {
-    super.connectedCallback();
-    await this.fetchFox();
-  }
-
-  async fetchFox() {
-    const response = await fetch('https://randomfox.ca/floof/');
-    const data = await response.json();
-    this.src = data.image;
-    this.alt = "A random fox";
-    this.url = data.link;
-    this.elementVisisble = true;
   }
 }
 globalThis.customElements.define(InstaBasicImage.tag, InstaBasicImage);

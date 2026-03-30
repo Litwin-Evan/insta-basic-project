@@ -10,7 +10,7 @@ import "./insta-basic-slide.js";
 import "./insta-basic-arrows.js";
 import "./insta-basic-indicator.js";
 import "./insta-basic-image.js";
-
+import "./insta-basic-like.js";
 /**
  * `insta-basic-project`
  * 
@@ -32,6 +32,8 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
     };
     this.subHeading = "Slide 1, sub-heading";
     this.currentImage = "";
+    this.slideData = []
+    this.author = {};
   }
 
   // Lit reactive properties
@@ -42,6 +44,9 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
       currentIndex: { type: Number },
       subHeading: { type: String },
       currentImage: { type: String },
+      slideData: { type: Array},
+      author: { type: Object},
+
     };
   }
 
@@ -85,8 +90,8 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
       }
       .indicator {
         position: absolute;
-        bottom: 5px;
-        left: 35px;
+        bottom: var(--ddd-spacing-2);
+        left: var(--ddd-spacing-9);
         transform: translateX(-50%);
       }
 
@@ -105,62 +110,79 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
 
 <insta-basic-description
   top-heading="${this.title}"
-  second-heading="${this.subHeading}">
+  second-heading="${this.subHeading}"
+  author-name="${this.author?.name}"
+  author-photo="${this.author?.photo}"
+  author-username="${this.author?.username}">
+
+
 </insta-basic-description>
 
-<insta-basic-image src="${this.currentImage}" alt="Description of the image"></insta-basic-image>
+<insta-basic-image .src="${this.currentImage}" alt="Random Fox Image"></insta-basic-image>
 
-
-
+<insta-basic-like .index="${this.currentIndex}"></insta-basic-like>
 
  
   <div class="indicator">
     <insta-basic-indicator
-      .total="${this.slides ? this.slides.length : 0}"
+      .total="${this.slideData ? this.slideData.length : 0}"
       .currentIndex="${this.currentIndex}"
       @dot-clicked="${this._onDotClicked}"
       >
     </insta-basic-indicator>
   </div>`;
   }
+updateQueryParam(key, value) {
+  const currentUrl = new URL(window.location.href);
+  currentUrl.searchParams.set(key, value);
+  history.pushState(null, '', currentUrl.toString());
 
+}
 next() {
-  if (this.currentIndex < this.slides.length - 1) {
+  if (this.currentIndex < this.slideData.length - 1) {
     this.currentIndex++;
+    this.updateQueryParam('activeIndex', this.currentIndex);
     this._updateSlides();
   }
 }
-
 
 prev() {
   if (this.currentIndex > 0) {
     this.currentIndex--;
+    this.updateQueryParam('activeIndex', this.currentIndex);
     this._updateSlides();
   }
 }
 
-firstUpdated() {
-  this.slides = Array.from(this.querySelectorAll("insta-basic-slide"));
+async firstUpdated() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const indexFromUrl = urlParams.get('activeIndex');
+  if (indexFromUrl !== null) {
+    this.currentIndex = parseInt(indexFromUrl)
+  }
+
+  const dataUrl = new URL("./data.json", import.meta.url).href;
+  const response = await fetch(dataUrl);
+  const data = await response.json();
+  this.slideData = data.slides;
   this._updateSlides();
 }
 
 _updateSlides() {
-  this.slides.forEach((slide, i) => {
-    slide.style.display = i === this.currentIndex ? "block" : "none";
-  });
-
-  const currentSlide = this.slides[this.currentIndex];
-  if (currentSlide) {
-    this.title = currentSlide.getAttribute("top-heading");
-    this.subHeading = currentSlide.getAttribute("second-heading");
-    this.currentImage = currentSlide.getAttribute("image-src");
+  const slide = this.slideData?.[this.currentIndex];
+  if (slide) {
+    this.title = slide.topHeading;
+    this.subHeading = slide.subHeading;
+    this.currentImage = slide.photo;
+    this.author = slide.author;
   }
+}
 
-}
 _onDotClicked(e) {
-  console.log("event received:", e.detail.index);
   this.currentIndex = e.detail.index;
+  this.updateQueryParam('activeIndex', this.currentIndex);
   this._updateSlides(); 
+  }
 }
-}
+
 globalThis.customElements.define(InstaBasicProject.tag, InstaBasicProject);

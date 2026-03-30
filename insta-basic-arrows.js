@@ -46,10 +46,10 @@ constructor() {
         top: 45%;
       }
       button {
-        background-color: white;
+        background-color: var(--ddd-theme-default-white);
         color: var(--ddd-theme-default-link);
         border-color: var(--ddd-theme-default-potential0);
-        border-width: 10px;
+        border-width: var(--ddd-border-size-lg);
         border: solid;
         padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
         cursor: pointer;
