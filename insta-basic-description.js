@@ -21,16 +21,20 @@ export class InstaBasicDescription extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.topHeading = "TOP LINE HEADING";
-    this.subHeading = "Slide 1, sub-heading";
+    this.caption = "Caption";
+    this.location = "Location";
+    this.username = "Username";
+    this.name = "Name";
   }
 
   // Lit reactive properties
   static get properties() {
     return {
       ...super.properties,
-      topHeading: { type: String, attribute: "top-heading" },
-      subHeading: { type: String, attribute: "second-heading" },
+      caption: { type: String, attribute: "caption" },
+      location: { type: String, attribute: "location" },
+      username: { type: String, attribute: "author-username" },
+      name: { type: String, attribute: "author-name" },
     };
   }
 
@@ -39,48 +43,49 @@ export class InstaBasicDescription extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
       :host {
-        display: block;
-        color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-accent);
-        font-family: var(--ddd-font-navigation);
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;
       }
       .wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
       }
-      h3 span {
-        font-size: var(--insta-basic-description-label-font-size, var(--ddd-font-size-s));
-      }
-       .blue-line {
-        border: none;
-        height: 2px;
-        width: 75px;
-        background-color: var(--ddd-theme-default-skyBlue);
-        margin-left: var(--ddd-spacing-8);
-          margin-top: var(--ddd-spacing-6);
-      }
-      .top-heading {
-        font-size: var(--insta-basic-description-top-heading-font-size, var(--ddd-font-size-m));
-        text-transform: uppercase;
-        color: var(--ddd-theme-default-skyBlue);
-        margin-bottom: var(--ddd-spacing-2);
-        margin-left: var(--ddd-spacing-8);
-      }
-      .second-heading {
-        font-size: var(--insta-basic-description-second-heading-font-size, var(--ddd-font-size-l));
-        text-transform: uppercase;
-        color: var(--ddd-theme-default-beaverBlue);
-        margin-left: var(--ddd-spacing-8);
+      
+      .descritpion-row {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: var(--ddd-spacing-4);
+        padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
+
         }
-      .content {
-        overflow-y: auto;
-        max-height: 250px;
-        display: block;
-        padding-right: var(--ddd-spacing-4);
-        margin-left: var(--ddd-spacing-8);
-        width: 75%;
-        color: var(--ddd-theme-default-beaverBlue);
+
+      .caption-row {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: var(--ddd-spacing-4);
+        padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
+
       }
+
+      .username {
+        bottom: 0;
+        right: 0;
+        margin: 0;
+      }
+      .caption {
+        font-size: var(--insta-basic-description-top-heading-font-size, var(--ddd-font-size-sS));
+      }
+
+      .location{
+        font-size: var(--insta-basic-description-second-heading-font-size, var(--ddd-font-size-sS));
+        text-transform: uppercase;
+        }
       
     `];
   }
@@ -89,11 +94,15 @@ export class InstaBasicDescription extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
-  <div class="top-heading">${this.topHeading}</div>
-  <div class="second-heading"><span>${this.subHeading}</span></div>
-  <hr class="blue-line">
-  <div class="content">
-    <slot></slot>
+
+  <div class="descritpion-row">
+    <div class="name"><span>${this.name}</span></div>
+    <div class="location"><span>${this.location}</span></div>
+  </div>
+  <div class="caption-row">
+    <div class="username"><span>${this.username}</span></div>
+    <div class="caption">${this.caption}</div>
+    
   </div>
 </div>`;
   }

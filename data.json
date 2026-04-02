@@ -1,31 +1,199 @@
 {
     "slides": [
         {
-            "topHeading": "Sunrise",
-            "subHeading": "Taken around the corner",
+            "caption": "All rise",
+            "location": "Yankee Stadium",
             "dateTaken": "2026-01-02",
-            "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTewrqU2aLzzecS5nP822EaoiA5CVQxuYP38g&s",
+            "photo": "https://blogs.fangraphs.com/wp-content/uploads/2025/08/USATSI_26674867.jpg",
             "author": {
-                "name": "Joe Dirt",
-                "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTewrqU2aLzzecS5nP822EaoiA5CVQxuYP38g&s",
+                "name": "New York Yankees",
+                "thumbnail": "https://blogs.fangraphs.com/wp-content/uploads/2025/08/USATSI_26674867.jpg",
                 "userSince": "2026",
-                "username": "joe.around"   
+                "username": "aaron.judge"   
             }
             
         },
         {
-            "topHeading": "Ocean",
-            "subHeading": "The Great Barrier Reef",
+            "caption": "Hi",
+            "location": "Yankee Stadium",
             "dateTaken": "2026-01-02",
-            "photo": "https://afar.brightspotcdn.com/dims4/default/de283c0/2147483647/strip/false/crop/1600x900+0+84/resize/1200x675!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fae%2Ffe%2F6496852583abdad7a0a28cc78fb6%2Foriginal-shutterstock-1158634060-20copy.jpg",
+            "photo": "https://img.mlbstatic.com/mlb-images/image/upload/ar_16:9,g_auto,q_auto:good,w_1024,c_fill,f_jpg,dpr_3.0/mlb/tfq8sftvzk8cpul7crwd",
             "author": {
-                "name": "Frank Dirt",
-                "photo": "https://afar.brightspotcdn.com/dims4/default/de283c0/2147483647/strip/false/crop/1600x900+0+84/resize/1200x675!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fae%2Ffe%2F6496852583abdad7a0a28cc78fb6%2Foriginal-shutterstock-1158634060-20copy.jpg",
+                "name": "New York Yankees",
+                "thumbnail": "https://img.mlbstatic.com/mlb-images/image/upload/ar_16:9,g_auto,q_auto:good,w_1024,c_fill,f_jpg,dpr_3.0/mlb/tfq8sftvzk8cpul7crwd",
                 "userSince": "2026",
-                "username": "frank.around" 
+                "username": "im.fried" 
               
             }
-        }
+        },
+        {
+                "caption": "Hello",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://assets.cubsinsider.com/wp-content/uploads/2026/01/04165044/AP25226063792608-780x470.jpg",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://assets.cubsinsider.com/wp-content/uploads/2026/01/04165044/AP25226063792608-780x470.jpg",
+                    "userSince": "2026",
+                    "username": "belly.bomber" 
+                
+                }
+            },
+            {   
+            "caption": "Sup",
+            "location": "Yankee Stadium",
+            "dateTaken": "2026-01-02",
+            "photo": "https://s.yimg.com/ny/api/res/1.2/PS0FP3trRDXChFqvDhsbTA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ2ODtjZj13ZWJw/https://media.zenfs.com/en/athlon_sports_articles_610/2c720dce65c1a32aeabbe9272f5ed18c",
+            "author": {
+                "name": "New York Yankees",
+                "thumbnail": "https://s.yimg.com/ny/api/res/1.2/PS0FP3trRDXChFqvDhsbTA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ2ODtjZj13ZWJw/https://media.zenfs.com/en/athlon_sports_articles_610/2c720dce65c1a32aeabbe9272f5ed18c",
+                "userSince": "2026",
+                "username": "cole.gerrit"
+                 }
+            },
+            {
+                "caption": "Yo",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://img.mlbstatic.com/mlb-images/image/upload/ar_16:9,g_auto,q_auto:good,w_1024,c_fill,f_jpg/mlb/zpxnwcan0bmjqxiq95sq",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://img.mlbstatic.com/mlb-images/image/upload/ar_16:9,g_auto,q_auto:good,w_1024,c_fill,f_jpg/mlb/zpxnwcan0bmjqxiq95sq",
+                    "userSince": "2026",
+                    "username": "wells.austin" 
+                  
+                }
+            },
+            {
+                "caption": "Hey",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://yesnetwork.com/wp-content/uploads/2025/12/e4znvjjqlkbjkywoy5sz.jpg",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://yesnetwork.com/wp-content/uploads/2025/12/e4znvjjqlkbjkywoy5sz.jpg",
+                    "userSince": "2026",
+                    "username": "chisholm.jazz" 
+                  
+                }
+            },
+            {
+                "caption": "Wassup",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://s.yimg.com/ny/api/res/1.2/Rr.OLQZ.3s8.NdB28keE0Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ0MTtjZj13ZWJw/https://media.zenfs.com/en/ny_post_sports_articles_389/aee197c308a6480ae3326825aff29426",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://s.yimg.com/ny/api/res/1.2/Rr.OLQZ.3s8.NdB28keE0Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ0MTtjZj13ZWJw/https://media.zenfs.com/en/ny_post_sports_articles_389/aee197c308a6480ae3326825aff29426",
+                    "userSince": "2026",
+                    "username": "grisham.trent" 
+                  
+                }
+            },
+            {
+                "caption": "Hola",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://platform.pinstripealley.com/wp-content/uploads/sites/124/chorus/uploads/chorus_asset/file/25994746/2214789705.jpg?quality=90&strip=all&crop=0.0087565674255643%2C0%2C99.982486865149%2C100&w=2400",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://platform.pinstripealley.com/wp-content/uploads/sites/124/chorus/uploads/chorus_asset/file/25994746/2214789705.jpg?quality=90&strip=all&crop=0.0087565674255643%2C0%2C99.982486865149%2C100&w=2400",
+                    "userSince": "2026",
+                    "username": "rice.rice.benny" 
+                  
+                }
+            },
+            {
+                "caption": "Sup",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://img.mlbstatic.com/mlb-images/image/upload/ar_16:9,g_auto,q_auto:good,w_1024,c_fill,f_jpg/mlb/jqc8f8doitissbupyioo",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://img.mlbstatic.com/mlb-images/image/upload/ar_16:9,g_auto,q_auto:good,w_1024,c_fill,f_jpg/mlb/jqc8f8doitissbupyioo",
+                    "userSince": "2026",
+                    "username": "bednar.david"
+                     }
+            },
+            {
+                "caption": "Hello",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://news.northeastern.edu/wp-content/uploads/2025/10/Cam-Schlittler_1400.jpg",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://news.northeastern.edu/wp-content/uploads/2025/10/Cam-Schlittler_1400.jpg",
+                    "userSince": "2026",
+                    "username": "schlittler.cam" 
+                  
+                }
+            },
+            {
+                    "caption": "Hi",
+                    "location": "Yankee Stadium",
+                    "dateTaken": "2026-01-02",
+                    "photo": "https://dims.apnews.com/dims4/default/a284be2/2147483647/strip/true/crop/5276x3517+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fa7%2F7b%2Fc23b7995b3ad311e762223090b92%2F91a9232e71744bfeae217c8c5a423e54",
+                    "author": {
+                        "name": "New York Yankees",
+                        "thumbnail": "https://dims.apnews.com/dims4/default/a284be2/2147483647/strip/true/crop/5276x3517+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fa7%2F7b%2Fc23b7995b3ad311e762223090b92%2F91a9232e71744bfeae217c8c5a423e54",
+                        "userSince": "2026",
+                        "username": "mcMahon.ryan" 
+                    
+                    }
+            },
+            {
+                "caption": "Hey",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/n1k212plsn3h8butfwjt",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/n1k212plsn3h8butfwjt",
+                    "userSince": "2026",
+                    "username": "volpe.anthony" 
+                  
+                }
+            },
+            {
+                "caption": "Wassup",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVrRw06QewvdlVEul2sBQF7mMllpmxMCHZw&s",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdVrRw06QewvdlVEul2sBQF7mMllpmxMCHZw&s",
+                    "userSince": "2026",
+                    "username": "dominguez.jasson" 
+                  
+                }
+            },
+            {
+                "caption": "Hola",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://www.sportsnet.ca/wp-content/uploads/2025/08/carlos.rodon_.1280-1-768x432.jpg",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://www.sportsnet.ca/wp-content/uploads/2025/08/carlos.rodon_.1280-1-768x432.jpg",
+                    "userSince": "2026",
+                    "username": "carlos.rodon" 
+                  
+                }
+            },
+            {
+                "caption": "Sup",
+                "location": "Yankee Stadium",
+                "dateTaken": "2026-01-02",
+                "photo": "https://www.newsday.com/_next/image?url=https%3A%2F%2Fcdn.newsday.com%2Fimage-service%2Fversion%2Fc%3AZmIyZTk5MjEtMWU0YS00%3AYmQxOGU3NTYtNzhlYS00%2Fcopy-of-spyankees250911.jpg%3Ff%3DLandscape%2B16%253A9%26w%3D770%26q%3D1&w=1920&q=80",
+                "author": {
+                    "name": "New York Yankees",
+                    "thumbnail": "https://www.newsday.com/_next/image?url=https%3A%2F%2Fcdn.newsday.com%2Fimage-service%2Fversion%2Fc%3AZmIyZTk5MjEtMWU0YS00%3AYmQxOGU3NTYtNzhlYS00%2Fcopy-of-spyankees250911.jpg%3Ff%3DLandscape%2B16%253A9%26w%3D770%26q%3D1&w=1920&q=80",
+                    "userSince": "2026",
+                    "username": "jose.caballero" 
+                  
+                }
+            }
+
     ]
 }
 

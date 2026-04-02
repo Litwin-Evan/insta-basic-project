@@ -59,40 +59,14 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-default-limestoneMaxLight);
         font-family: var(--ddd-font-navigation);
-        margin: var(--ddd-spacing-4) 0;
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
+        margin-right: 0;
         border-radius: var(--ddd-border-radius);
         box-shadow: var(--ddd-boxShadow-lg);
         position: relative;
-        min-height: 400px;
-
-      }
-
-      .wrapper {
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
-        overflow-y: auto;
-        border-radius: var(--ddd-border-radius);
-        box-shadow: var(--ddd-shadow-elevation-2);
-        max-height: 400px;
-        max-width: 600px;
-        margin-right: auto;
-        padding-bottom: var(--ddd-spacing-6);
-      }
-
-      h3 span {
-        font-size: var(--insta-basic-project-label-font-size, var(--ddd-font-size-s));
-        color: var(--ddd-theme-default-skyBlue);
-        text-transform: uppercase;
-        margin-right: var(--ddd-spacing-2);
-      }
-      .indicator {
-        position: absolute;
-        bottom: var(--ddd-spacing-2);
-        left: var(--ddd-spacing-9);
-        transform: translateX(-50%);
+        height: 700px;
+        width: 500px;
+        ;
       }
 
     `];
@@ -109,10 +83,10 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
 </div>
 
 <insta-basic-description
-  top-heading="${this.title}"
-  second-heading="${this.subHeading}"
+  caption="${this.caption}"
+  location="${this.location}"
   author-name="${this.author?.name}"
-  author-photo="${this.author?.photo}"
+  author-thumbnail="${this.author?.thumbnail}"
   author-username="${this.author?.username}">
 
 
@@ -127,6 +101,7 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
     <insta-basic-indicator
       .total="${this.slideData ? this.slideData.length : 0}"
       .currentIndex="${this.currentIndex}"
+      .photos="${this.slideData.map(s => s.author.thumbnail)}"
       @dot-clicked="${this._onDotClicked}"
       >
     </insta-basic-indicator>
@@ -171,8 +146,8 @@ async firstUpdated() {
 _updateSlides() {
   const slide = this.slideData?.[this.currentIndex];
   if (slide) {
-    this.title = slide.topHeading;
-    this.subHeading = slide.subHeading;
+    this.caption = slide.caption;
+    this.location = slide.location;
     this.currentImage = slide.photo;
     this.author = slide.author;
   }

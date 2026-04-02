@@ -40,6 +40,7 @@ toggleLike() {
     this.saveToStorage();
 
 }
+light
 
 saveToStorage() {
   localStorage.setItem(`like-${this.index}`, JSON.stringify({
@@ -60,6 +61,18 @@ loadFromStorage() {
   }
 
 }
+_share() {
+  if (navigator.share) {
+    navigator.share({
+    title: "Check out this post!",
+    url: window.location.href,
+  });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert("Link copied to clipboard!");
+    });
+  }
+}
 
 connectedCallback(){
   super.connectedCallback();
@@ -68,7 +81,7 @@ connectedCallback(){
 updated(changedProperties) {
   if(changedProperties.has(`index`)) {
     this.liked = false;
-    this.Count = 0;
+    this.likeCount = 0;
     this.loadFromStorage();
   }
 }
@@ -80,27 +93,37 @@ updated(changedProperties) {
         display: block;
       }
       .heart-btn {
-        width: 40px;
-        height: 40px;
-        border-radius: var(--ddd-radius-circle);
-        border: 1px solid var(--ddd-theme-default-potentialMidnight);
+        background: none;
+        border: none;
         cursor: pointer;
-        transition: transform 0.1s ease;
+        transition: transform 0.2s ease;
         margin-left: var(--ddd-spacing-30);
+        font-size: var(--ddd-font-size-l);
+      }
+      .share-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: var(--ddd-font-size-l);
+        transition: transform 0.2s ease;
+        color: var(--ddd-theme-default-black);
+      }
+      .share-btn:hover {
+        transform: scale(1.2);
       }
 
       .heart-btn:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
 
       }
 
       .heart-btn.liked {
-        background-color: var(--ddd-theme-default-original87Pink);
+        color: var(--ddd-theme-default-original87Pink);
 
       }
 
       .heart-btn:not(.liked) {
-        background-color: var(--ddd-theme-default-white);
+        color: var(--ddd-theme-default-black);
   
       }
     `];
@@ -108,10 +131,14 @@ updated(changedProperties) {
 
   // Lit render the HTML
   render() {
+    const label = this.likeCount === 1 ? 'Like' : 'Likes';
     return html`
    <button class="heart-btn ${this.liked ? 'liked' : ''}" @click="${this.toggleLike}">
+    ${this.liked ? '\u2661' : '\u2661'}
     </button>
-    <span>${this.likeCount}</span>
+    <span>${this.likeCount} ${label}</span>
+    <button class="share-btn" @click="${this._share}"> &#x2197;
+    </button>
     `;
     }
 

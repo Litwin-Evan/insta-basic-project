@@ -37,13 +37,13 @@ constructor() {
       }
       .prev {
         position: absolute;
-        left: -20px;
-        top: 45%;
+        left: 10px;
+        top: 50%;
       }
       .next {
         position: absolute;
-        right: -30px;
-        top: 45%;
+        right: 10px;
+        top: 50%;
       }
       button {
         background-color: var(--ddd-theme-default-white);

@@ -17,6 +17,7 @@ export class InstaBasicIndicator extends DDDSuper(I18NMixin(LitElement)) {
     super();
         this.total = 0;
         this.currentIndex = 0;
+        this.photos = [];
   }
 
   static get properties() {
@@ -24,6 +25,7 @@ export class InstaBasicIndicator extends DDDSuper(I18NMixin(LitElement)) {
       ...super.properties,
       total: { type: Number },
       currentIndex: { type: Number },
+      photos: { type: Array },
     };
   }
 
@@ -35,17 +37,23 @@ export class InstaBasicIndicator extends DDDSuper(I18NMixin(LitElement)) {
       }
       .dots {
         display: flex;
-        margin-left: var(--ddd-spacing-30);
         gap: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-2);
+        padding: var(--ddd-spacing-2) 10px;
+        max-width: 4000px;
+        margin: auto 0;
+        overflow-x: auto;
+        margin-top: var(--ddd-spacing-13);
         }
+
+        
     .dot {
-    width: 12px;
-    height: 12px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background-color: var(--ddd-theme-default-skyBlue);
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: pointer;
+    flex-shrink: 0;
     }
     .dot.active {
     opacity: 1;
@@ -57,10 +65,10 @@ export class InstaBasicIndicator extends DDDSuper(I18NMixin(LitElement)) {
     let dots = [];
     for (let i = 0; i < this.total; i++) {
       dots.push(html`
-      <span 
+      <img
         class="dot ${i === this.currentIndex ? 'active' : ''}"
+        style="background-image: url(${this.photos[i]}); background-size: cover; background-position: center;"
         @click="${() => this._dotClicked(i)}">
-    </span>
         `);
     }
     return html`

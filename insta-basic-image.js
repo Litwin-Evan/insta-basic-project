@@ -43,15 +43,18 @@ export class InstaBasicImage extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
         :host {
-            display: block;
+            display: flex;
+            justify-content: center;
+
 
         }
           img { 
-            aspect-ratio: 1 / 1;
-            height: 400x;
-            width: 400px;
-            border-radius: var(--ddd-border-radius);
-            margin-left: var(--ddd-spacing-30);
+            aspect-ratio: 3 / 2;
+            height: 300px;
+            width: 350px;
+            object-fit: cover;
+            border: 2px solid var(--ddd-theme-default-potentialMidnight);
+            border-radius: var(--ddd-radius-lg);
             
           } 
       
