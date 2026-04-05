@@ -25,6 +25,7 @@ export class InstaBasicDescription extends DDDSuper(I18NMixin(LitElement)) {
     this.location = "Location";
     this.username = "Username";
     this.name = "Name";
+    this.profilePhoto = "";
   }
 
   // Lit reactive properties
@@ -35,6 +36,7 @@ export class InstaBasicDescription extends DDDSuper(I18NMixin(LitElement)) {
       location: { type: String, attribute: "location" },
       username: { type: String, attribute: "author-username" },
       name: { type: String, attribute: "author-name" },
+      profilePhoto: { type: String, attribute: "profile-photo" },
     };
   }
 
@@ -74,9 +76,9 @@ export class InstaBasicDescription extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       .username {
-        bottom: 0;
-        right: 0;
-        margin: 0;
+        bottom: var(--ddd-spacing-0);
+        right: var(--ddd-spacing-0);
+        margin: var(--ddd-spacing-0);
       }
       .caption {
         font-size: var(--insta-basic-description-top-heading-font-size, var(--ddd-font-size-sS));
@@ -86,6 +88,13 @@ export class InstaBasicDescription extends DDDSuper(I18NMixin(LitElement)) {
         font-size: var(--insta-basic-description-second-heading-font-size, var(--ddd-font-size-sS));
         text-transform: uppercase;
         }
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--ddd-theme-default-potentialMidnight);
+      }
       
     `];
   }
@@ -94,7 +103,9 @@ export class InstaBasicDescription extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
 <div class="wrapper">
-
+  <div>
+    <img src="${this.profilePhoto}" alt="${this.name}'s profile photo">
+  </div>
   <div class="descritpion-row">
     <div class="name"><span>${this.name}</span></div>
     <div class="location"><span>${this.location}</span></div>

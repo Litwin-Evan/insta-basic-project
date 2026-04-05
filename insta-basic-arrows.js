@@ -37,12 +37,12 @@ constructor() {
       }
       .prev {
         position: absolute;
-        left: 10px;
+        left: var(--ddd-spacing-3);
         top: 50%;
       }
       .next {
         position: absolute;
-        right: 10px;
+        right: var(--ddd-spacing-3);
         top: 50%;
       }
       button {
@@ -67,8 +67,8 @@ constructor() {
   render() {
     return html`
     <div class="wrapper">
-        <button class="prev" @click=${() => this.dispatchEvent(new CustomEvent('prev-clicked', {bubbles: true, composed: true }))}><</button>
-        <button class="next" @click=${() => this.dispatchEvent(new CustomEvent('next-clicked', {bubbles: true, composed: true}))}>></button>
+        <button class="prev" aria-label="Previous" @click=${() => this.dispatchEvent(new CustomEvent('prev-clicked', {bubbles: true, composed: true }))}><</button>
+        <button class="next" aria-label="Next" @click=${() => this.dispatchEvent(new CustomEvent('next-clicked', {bubbles: true, composed: true}))}>></button>
     </div>
     `;
   }

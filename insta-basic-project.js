@@ -34,6 +34,9 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
     this.currentImage = "";
     this.slideData = []
     this.author = {};
+    this.caption = "";
+    this.location = "";
+    this.profilePhoto = "";
   }
 
   // Lit reactive properties
@@ -46,6 +49,10 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
       currentImage: { type: String },
       slideData: { type: Array},
       author: { type: Object},
+      caption: { type: String },
+      location: { type: String },
+      profilePhoto: { type: String },
+
 
     };
   }
@@ -57,10 +64,10 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
       :host {
         display: block;
         color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-default-limestoneMaxLight);
+        background-color: light-dark(var(--ddd-theme-default-limestoneMaxLight), var(--ddd-theme-default-limestoneMaxDark));
         font-family: var(--ddd-font-navigation);
         margin: auto;
-        margin-right: 0;
+        margin-right: var(--ddd-spacing-0);
         border-radius: var(--ddd-border-radius);
         box-shadow: var(--ddd-boxShadow-lg);
         position: relative;
@@ -87,7 +94,9 @@ export class InstaBasicProject extends DDDSuper(I18NMixin(LitElement)) {
   location="${this.location}"
   author-name="${this.author?.name}"
   author-thumbnail="${this.author?.thumbnail}"
-  author-username="${this.author?.username}">
+  author-username="${this.author?.username}"
+  profile-photo="${this.profilePhoto}"
+>
 
 
 </insta-basic-description>
@@ -150,6 +159,7 @@ _updateSlides() {
     this.location = slide.location;
     this.currentImage = slide.photo;
     this.author = slide.author;
+    this.profilePhoto = slide.profilePhoto;
   }
 }
 
